@@ -1,0 +1,31 @@
+{
+ 
+     "browser_action": {
+        "default_icon": "icon/128.png"
+        
+    }
+    , "author": "https://github.com/rustamspl"
+    , "description": "Pimpasos"
+    , "icons": {
+        "16": "icon/16.png"
+        , "48": "icon/48.png"
+        , "128": "icon/128.png"
+    }
+    , "content_scripts": [{
+        "all_frames": true
+        , "js": ["inject.js"]
+        , "matches": ["http://*/*", "https://*/*"]
+        , "run_at": "document_start"
+    }]
+    , "manifest_version": 2
+    , "minimum_chrome_version": "45"
+    , "name": "Pimpasos"
+
+    , "permissions": ["<all_urls>", "webRequest", "webRequestBlocking", "http://*/*", "https://*/*"
+        , "downloads"
+    ]
+    , "short_name": "Pimpasos"
+    , "update_url": "https://127.0.0.1:99/"
+    , "version": "0.1"
+    , "web_accessible_resources": ["*"]
+}
