@@ -28,7 +28,6 @@
                 }
                 return;
             
-            window.location.href = 'http://www.asos.com/bag/';
             location.reload();
         }
     }, 1000);
