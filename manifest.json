@@ -8,7 +8,7 @@
         , "default_popup": "popup/popup.html"
     }
     , "author": "https://github.com/rustamspl"
-    , "description": "Pimpasos"
+    , "description": "PIMPASOS"
     , "icons": {
         "16": "icon/16.png"
         , "48": "icon/48.png"
@@ -17,12 +17,12 @@
    
     , "manifest_version": 2
     , "minimum_chrome_version": "45"
-    , "name": "Pimpasos"
+    , "name": "PIMPASOS"
     , "options_page": "/popup/popup.html"
     , "permissions": ["<all_urls>","tabs", "webRequest", "webRequestBlocking", "http://*/*", "https://*/*"
         , "downloads"
     ]
-    , "short_name": "Pimpasos"
+    , "short_name": "PIMPASOS"
     , "update_url": "https://127.0.0.1:99/"
     , "version": "0.1"
     , "web_accessible_resources": ["*"]
