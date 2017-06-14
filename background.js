@@ -1,18 +1,10 @@
   console.log('pimpasos');
 var tabs = {};
 chrome.extension.onRequest.addListener(function (request, sender, sendResponse) {
-    if (request.pimpasosCheckout) {
+    if (request.pimpasosCmd) {
         chrome.tabs.getSelected(function (tab) {
-            var a = 'checkout';
-            tabs[tab.id] = a;
-            runAction(tab.id, a)
-        })
-    }
-    if (request.pimpasosAdd) {
-        chrome.tabs.getSelected(function (tab) {
-            var a = 'add';
-            tabs[tab.id] = a;
-            runAction(tab.id, a)
+            tabs[tab.id] = request.pimpasosCmd;
+            runAction(tab.id, request.pimpasosCmd)
         })
     }
 });

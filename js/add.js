@@ -1,6 +1,9 @@
 (function () {
     console.log('im PimpAsos add');
-    if(window.PimpAsos)return;
+    if(window.PimpAsos){
+        console.log('exit');
+        return;
+    }
     window.PimpAsos=true;
     var dispatchMouseEvent = function (target, var_args) {
         var e = document.createEvent("MouseEvents");
