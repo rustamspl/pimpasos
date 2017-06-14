@@ -1,5 +1,10 @@
 (function () {
     console.log('im PimpAsos checkout');
+    if (window.PimpAsos) {
+        console.log('exit');
+        return;
+    }
+    window.PimpAsos = true;
     var dispatchMouseEvent = function (target, var_args) {
         var e = document.createEvent("MouseEvents");
         e.initEvent.apply(e, Array.prototype.slice.call(arguments, 1));
@@ -22,17 +27,17 @@
         state = 'secure';
         t = 60 * 45;
     }
-    if(!state){
-        t=15;
+    if (!state) {
+        t = 15;
     }
     setInterval(function () {
         --t;
-        document.title = t+' PimpAsos Checkout['+state+'] ';
+        document.title = t + ' PimpAsos Checkout[' + state + '] ';
         if (t <= 0) {
             if (state == 'bag') {
                 var m = document.querySelectorAll('.bag-total-button--checkout')
                 if (m.length > 0) {
-                    t=15;
+                    t = 15;
                     click(m[0])
                     return;
                 } else {
@@ -41,7 +46,6 @@
                 return;
             }
             window.location.href = 'http://www.asos.com/bag/';
-           
         }
     }, 1000);
 })();
