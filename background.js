@@ -15,7 +15,6 @@ function runAction(tab, a) {
     var code = "(function(){var e = document.createElement('script'); e.src = " + JSON.stringify(url) +
         ";(document.head || document.documentElement).appendChild(e);" +
         "e.onload = function () {e.parentNode.removeChild(e);};})()";
-        console.log({ code: code })
     chrome.tabs.executeScript(tab, { code: code }, function () {})
 }
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
