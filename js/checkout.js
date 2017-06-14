@@ -1,5 +1,5 @@
 (function () {
-    console.log('im checkout');
+    console.log('im PimpAsos checkout');
     var dispatchMouseEvent = function (target, var_args) {
         var e = document.createEvent("MouseEvents");
         e.initEvent.apply(e, Array.prototype.slice.call(arguments, 1));
