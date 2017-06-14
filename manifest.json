@@ -18,7 +18,7 @@
     , "manifest_version": 2
     , "minimum_chrome_version": "45"
     , "name": "PIMPASOS"
-    , "options_page": "/popup/popup.html"
+    , "options_page": "/popup/opt.html"
     , "permissions": ["<all_urls>","tabs", "webRequest", "webRequestBlocking", "http://*/*", "https://*/*"
         , "downloads"
     ]
