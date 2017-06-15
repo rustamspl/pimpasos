@@ -18,17 +18,19 @@
         dispatchMouseEvent(element, 'mouseup', true, true);
     }
     var t = 15;
-
+    var notfound=true;
     setInterval(function () {
         --t;
         document.title = t+' PimpAsos Add';
         if (t <= 0) {
                 var m = document.querySelectorAll('.add-button')
-                if (m.length > 0) {
+                if (notfound&&m.length > 0) {
                     t=15;
                     click(m[0])
+                    notfound=false;
                     return;
                 } else {
+                    notfound=true;
                     location.reload();
                 }
                 return;
